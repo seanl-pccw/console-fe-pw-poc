@@ -11,6 +11,7 @@ export class MarketplaceProductPage {
 
     async goto() {
         await this.page.goto('https://shield.stage.consoleconnect.com/products');
+        await this.page.waitForLoadState("networkidle")
     }
 
     async orderIodProduct() {
